@@ -113,7 +113,7 @@ def svm_loss_vectorized(W, X, y, reg):
     #############################################################################
     rule = rule*np.ones(scorediff.shape)
     rule[np.arange(num_train),y] = -(np.sum(rule,axis=1))
-    print(rule.shape)
+    ##print(rule.shape)
     dW = X.T.dot(rule)
     dW /= num_train
     
